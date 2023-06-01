@@ -15,6 +15,9 @@ hello_world: hello_world.o
 f2c: f2c.o
 	$(CC) $(CFLAGS) -o $@ $^
 
+f2c_for: f2c_for.o
+	$(CC) $(CFLAGS) -o $@ $^
+
 c2f: c2f.o
 	$(CC) $(CFLAGS) -o $@ $^
 
