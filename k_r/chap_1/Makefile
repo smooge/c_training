@@ -7,7 +7,7 @@ CFLAGS=-I. -g -O2 -Wall -Wextra -fanalyzer -std=c17 -pedantic
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-all: hello_world f2c c2f
+all: hello_world f2c c2f f2c_for
 
 hello_world: hello_world.o
 	$(CC) $(CFLAGS) -o $@ $^
