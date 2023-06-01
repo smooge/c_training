@@ -10,8 +10,8 @@ int main(){
     float fahr, celsius;
     int lower,upper, step;
 
-    lower = 0;   // Lower limit of temperature table
-    upper = 550; // Upper limit
+    lower = -40;   // Lower limit of temperature table
+    upper = 460; // Upper limit
     step = 20;
 
     fahr = lower;
