@@ -4,8 +4,9 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-main(){
+int main(){
     int fahr, celsius;
     int lower,upper, step;
 
@@ -20,4 +21,5 @@ main(){
 	printf("%d\t=>\t%d\n",fahr,celsius);
 	fahr = fahr + step;
     }
+    exit(0);
 }
