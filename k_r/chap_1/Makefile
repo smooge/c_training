@@ -6,8 +6,8 @@ CFLAGS=-I. -O2 -Wall -Wextra -fanalyzer -std=c17 -pedantic
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-hello_world:
-	$(CC) $(CFLAGS) -o hello_world $@ $^
+hello_world: hello_world.o
+	$(CC) $(CFLAGS) -o $@ $^
 
 .PHONY: clean
 
