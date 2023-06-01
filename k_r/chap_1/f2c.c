@@ -1,13 +1,13 @@
 /*
   Sample Fahrenheit to Celsius from K&R C 2nd edition Book.
-  Page 9
+  Initial program is on pg 9 and this will update it to pg 12
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(){
-    int fahr, celsius;
+    float fahr, celsius;
     int lower,upper, step;
 
     lower = 0;   // Lower limit of temperature table
@@ -17,8 +17,8 @@ int main(){
     fahr = lower;
     printf("Fahrenheit to Celsius Conversion\n");
     while (fahr <= upper) {
-	celsius = 5 * ( fahr-32) / 9;
-	printf("%d\t=>\t%d\n",fahr,celsius);
+	celsius = 5.0 * ( fahr-32.0) / 9.0;
+	printf("%3.0f\t=>\t%6.1f\n",fahr,celsius);
 	fahr = fahr + step;
     }
     exit(0);
