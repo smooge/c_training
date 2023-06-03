@@ -1,7 +1,14 @@
 # Makefile for Chapter 1 items in K&R C
 
 CC=/opt/homebrew/bin/gcc
-#CFLAGS=-I. -O2 -std=c17 -pedantic -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextra -Wshadow -Wdouble-promotion -Wformat-truncation -Wformat=2 -Wundef -fno-common -Wconversion -fstack-usage -Wstack-usage=1024 -fanalyzer -Werror=format-security   
+
+## A simple set of CFLAGS to get basic issues
+#CFLAGS=-I. -O2 -std=c17 -Wall -Wextra -fanalyzer -pedantic
+
+## A complex set of CFLAGS to be closer to MISRA (error on anything)
+CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextra -Wshadow -Wdouble-promotion -Wformat-truncation -Wformat=2 -Wundef -fno-common -Wconversion -fstack-usage -Wstack-usage=1024 -fanalyzer -Werror -pedantic 
+
+#CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextra -Wshadow -Wdouble-promotion -Wformat-truncation -Wformat=2 -Wundef -fno-common -Wconversion -fstack-usage -Wstack-usage=1024 -fanalyzer -Werror=format-security -pedantic 
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
@@ -28,7 +35,10 @@ s1-4_f2c: s1-4_f2c.o
 clean:
 	rm -f *.o *~ core *.su
 
-.PHONY: clean_all
+.PHONY: clean_exec
 
-clean_all:
+clean_exec:
 	rm -f ex1_hello_world ex3_f2c ex4_c2f ex5_f2c s1-f_f2c
+
+.PHONY: clean_all
+clean_all: clean clean_exec
