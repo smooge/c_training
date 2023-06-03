@@ -13,7 +13,7 @@ CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextr
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-all: ex1_hello_world ex3_f2c ex4_c2f ex5_f2c s1-4_f2c
+all: ex1_hello_world ex3_f2c ex4_c2f ex5_f2c s1-4_f2c s1-5_copy
 
 ex1_hello_world: ex1_hello_world.o
 	$(CC) $(CFLAGS) -o $@ $^
@@ -30,10 +30,13 @@ ex5_f2c: ex5_f2c.o
 s1-4_f2c: s1-4_f2c.o
 	$(CC) $(CFLAGS) -o $@ $^
 
+s1-5_copy: s1-5_copy.o
+	$(CC) $(CFLAGS) -o $@ $^
+
 .PHONY: clean
 
 clean:
-	rm -f *.o *~ core *.su
+	rm -f *.o *~ core *.su *.dump
 
 .PHONY: clean_exec
 
