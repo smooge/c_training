@@ -6,12 +6,11 @@
 #include <stdio.h>  // needed for getchar
 #include <stdlib.h> // needed for exit
 
-main() {
-    long nc;
+int main() {
+    double nc;
 
-    nc = 0;
-    while (getchar() != EOF)
-	++nc;
-    printf("%ld\n", nc);
+    for (nc=0; getchar() != EOF; ++nc)
+	;
+    printf("%f\n", nc);
     exit(0);
 }
