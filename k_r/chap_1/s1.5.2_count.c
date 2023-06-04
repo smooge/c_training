@@ -1,5 +1,5 @@
 /*
-  Program for section 1.5.3 of K&R 2nd edition. Count characters until
+  Program for section 1.5.2 of K&R 2nd edition. Count characters until
   it reaches a end of file marker.
  */
 
@@ -19,6 +19,6 @@ int main() {
     while ( getchar() != EOF ){
 	++nc;
     }
-    printf("%lu\n", nc); // Unsigned long use lu for printing.
+    printf("\n%lu\n", nc); // Unsigned long use lu for printing.
     exit(0);
 }
