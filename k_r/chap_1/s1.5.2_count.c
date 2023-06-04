@@ -7,10 +7,18 @@
 #include <stdlib.h> // needed for exit
 
 int main() {
-    double nc;
+    /*
+      K&$ moved to float for large numbers, but 64 bit systems have a
+      sizable number to work with.
+     */
+    unsigned long nc = 0; // initialize at declaration
 
-    for (nc=0; getchar() != EOF; ++nc)
-	;
-    printf("%f\n", nc);
+    /* K&R suggested a for loop in their second example. This crammed
+       a lot into the one line which can make maintenance horrible.
+    */
+    while ( getchar() != EOF ){
+	++nc;
+    }
+    printf("%lu\n", nc); // Unsigned long use lu for printing.
     exit(0);
 }
