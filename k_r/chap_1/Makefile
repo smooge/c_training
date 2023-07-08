@@ -34,6 +34,8 @@ ex06_copy: ex06_copy.o
 ex08_count: ex08_count.o
 	$(CC) $(CFLAGS) -o $@ $^
 
+ex09_copy_space: ex08_copy_space.o
+	$(CC) $(CFLAGS) -o $@ $^
 
 s01.04_f2c: s01.04_f2c.o
 	$(CC) $(CFLAGS) -o $@ $^
@@ -56,7 +58,7 @@ clean:
 .PHONY: clean_exec
 
 clean_exec:
-	rm -f ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex06_count s01.4_f2c s01.05.01_copy s01.05.02_count s01.05.03_count
+	rm -f ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count 
 
 .PHONY: clean_all
 clean_all: clean clean_exec
