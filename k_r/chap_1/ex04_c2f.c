@@ -16,7 +16,7 @@ int main(){
 
     celsius = (double) lower;
     printf("Celsius to Fahrenheit Conversion\n");
-    while (celsius <= upper) {
+    while (celsius <= (double) upper) {
 	fahr = (( 9.0 / 5.0 ) * celsius ) +32.0;
 	printf("%3.0f\t=>\t%6.1f\n",celsius,fahr);
 	celsius = celsius + (double) step;

@@ -8,7 +8,7 @@
 int main(){
     int c; // character to be manipulated
     while ((c = getchar()) != EOF) {
-	putchar(c);
+	(void) putchar(c);
     }
     printf("%d - at EOF\n", c);
     printf("%d is EOF\n", EOF);

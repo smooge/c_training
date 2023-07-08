@@ -21,11 +21,11 @@ int main(){
     unsigned long num_lines = 0 ;   // number of lines we found.
 
     while (( c = getchar()) != EOF){
-	if ( c == ' ')
+	if ( (char) c == ' ')
 	    num_blanks++;
-	else if ( c == '\t')
+	else if ( (char) c == '\t')
 	    num_tabs++;
-	else if ( c == '\n')
+	else if ( (char) c == '\n')
 	    num_lines++;
     }
     printf("\n");
