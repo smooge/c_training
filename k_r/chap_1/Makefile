@@ -1,6 +1,7 @@
 # Makefile for Chapter 1 items in K&R C
 
-CC=/opt/homebrew/bin/gcc
+#CC=/opt/homebrew/bin/gcc
+CC=/usr/bin/gcc
 
 ## A simple set of CFLAGS to get basic issues
 #CFLAGS=-I. -O2 -std=c17 -Wall -Wextra -fanalyzer -pedantic
@@ -13,7 +14,7 @@ CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextr
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-all: ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex06_count s01.4_f2c s01.05.01_copy s01.05.02_count s01.05.03_count
+all: ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count
 
 ex01_hello_world: ex01_hello_world.o
 	$(CC) $(CFLAGS) -o $@ $^
