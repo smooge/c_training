@@ -14,7 +14,7 @@ CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextr
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-all: ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count
+all: ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count
 
 ex01_hello_world: ex01_hello_world.o
 	$(CC) $(CFLAGS) -o $@ $^
@@ -34,7 +34,7 @@ ex06_copy: ex06_copy.o
 ex08_count: ex08_count.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-ex09_copy_space: ex08_copy_space.o
+ex09_copy_space: ex09_copy_space.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 s01.04_f2c: s01.04_f2c.o
