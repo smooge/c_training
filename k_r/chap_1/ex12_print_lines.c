@@ -9,6 +9,11 @@
   are outside of the word due to space, newline, etc, we just print a
   newline and wait until we get into the next word. 
 
+  I rewrote the sample program and then checked out the C Answer
+  book. They used putchar(c) instead of the printf I did. I expect
+  putchar is lower overhead as printf will be doing all kinds of
+  'interpretation'. I used printf in this case mainly to use it.
+
 */
 
 #include <stdio.h>
