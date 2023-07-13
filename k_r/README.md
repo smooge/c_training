@@ -22,10 +22,30 @@ considered 'safe' programming has changed a lot since the 1970's. My
 hope is to improve the original examples to use what are considered
 'good' habits these days.
 
+# The C Answer Book #
+
+The original C book was meant to be a text book for schools and
+programmers to learn the C language, but it did not come with many
+'answers' for the problems as listed. The answers were instead in a
+different book, _The C Answer Book_ written by Clovis Tondo and Scott
+Gimpel. 
+
+This books examples are in the same vein as the K&R. Variable names are
+short, comments are barely existant, and the code may be 'obtuse'. That
+said, the answers will give multiple different versions depending on
+what a student may have covered already.
+
 
 ## Library of Congress Data
 
 Kernighan, Brian W. and Ritchie, Dennis W.
-	The C Programming Language. 2nd edition
+	_The C Programming Language_. 2nd edition
 	Copyright 1988 by Bell Telephone Laboratories
+	Prentice Hall, Englewood Cliffs, New Jersey 07632
 	QA 76.73.C15K47 1988
+
+Tondo, Clovis L and Gimpel, Scott E
+	_The C Answer Book_. 2nd edition
+	Copyright 1988 
+	Prentice Hall, Upper Saddle River, New Jersey 07458
+	QA 76.73.C15K47 1988 suppl.
