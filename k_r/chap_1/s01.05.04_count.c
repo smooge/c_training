@@ -21,11 +21,11 @@ int main(){
     state = OUT;
     nl = nw = nc = 0; /* set initial counts to 0 */
 
-    while ((c = getchar()) != EOF){
+    while (( c = getchar()) != EOF){
 	++nc;
-	if (c == '\n')
+	if ( (char) c == '\n')
 	    ++nl;
-	if (c == ' ' || c == '\n' || c == '\t')
+	if ( (char) c == ' ' || (char) c == '\n' || (char) c == '\t')
 	    state = OUT;
 	else if (state == OUT ) {
 	    state = IN;
