@@ -14,7 +14,7 @@ CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextr
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-all: ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count ex10_copy_replace
+all: ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count ex10_copy_replace s01.05.04_count 
 
 ex01_hello_world: ex01_hello_world.o
 	$(CC) $(CFLAGS) -o $@ $^
@@ -37,10 +37,10 @@ ex08_count: ex08_count.o
 ex09_copy_space: ex09_copy_space.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-s01.04_f2c: s01.04_f2c.o
+ex10_copy_replace: ex10_copy_replace.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-ex10_copy_replace: ex10_copy_replace.o
+s01.04_f2c: s01.04_f2c.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 s01.05.01_copy: s01.05.01_copy.o
@@ -52,6 +52,9 @@ s01.05.02_count: s01.05.02_count.o
 s01.05.03_count: s01.05.03_count.o
 	$(CC) $(CFLAGS) -o $@ $^
 
+s01.05.04_count: s01.05.04_count.o
+	$(CC) $(CFLAGS) -o $@ $^
+
 
 .PHONY: clean
 
@@ -61,7 +64,7 @@ clean:
 .PHONY: clean_exec
 
 clean_exec:
-	rm -f ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count ex10_copy_replace
+	rm -f ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count ex10_copy_replace s01.05.03_count s01.05.04_count
 
 .PHONY: clean_all
 clean_all: clean clean_exec
