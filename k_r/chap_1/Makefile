@@ -14,7 +14,7 @@ CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextr
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-EXECUTABLES = ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count ex10_copy_replace s01.05.04_count ex12_print_lines s01.06.01_arrays ex13_histogram ex14_histogram
+EXECUTABLES = ex01_hello_world ex03_f2c ex04_c2f ex05_f2c ex06_copy ex08_count ex09_copy_space s01.04_f2c s01.05.01_copy s01.05.02_count s01.05.03_count ex10_copy_replace s01.05.04_count ex12_print_lines s01.06.01_arrays ex13_histogram ex14_histogram s01.07.01_power
 
 all: $(EXECUTABLES)
 
@@ -67,6 +67,9 @@ s01.05.04_count: s01.05.04_count.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 s01.06.01_arrays: s01.06.01_arrays.o
+	$(CC) $(CFLAGS) -o $@ $^
+
+s01.07.01_power: s01.07.01_power.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 
