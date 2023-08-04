@@ -20,4 +20,5 @@ int main() {
 	    ++nl;
     }
     printf("\n%lu\n", nl);
+    exit(EXIT_SUCCESS);
 }

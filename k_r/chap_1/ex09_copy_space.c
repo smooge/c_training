@@ -29,5 +29,5 @@ int main(){
 	prev_c = now_c;
     }
     
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

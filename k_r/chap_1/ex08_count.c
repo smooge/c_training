@@ -30,5 +30,5 @@ int main(){
     }
     printf("\n");
     printf("blanks: %8lu tabs: %8lu newlines %8lu\n",num_blanks, num_tabs, num_lines);
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

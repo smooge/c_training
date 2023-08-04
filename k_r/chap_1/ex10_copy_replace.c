@@ -34,5 +34,5 @@ int main(){
 	}
     }
     
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

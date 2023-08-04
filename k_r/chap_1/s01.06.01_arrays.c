@@ -33,5 +33,5 @@ int main(){
 	printf(" %d", ndigit[i]);
     printf(", white space = %d, other = %d\n",nwhite,nother);
     
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

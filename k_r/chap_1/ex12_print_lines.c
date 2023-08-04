@@ -1,5 +1,5 @@
 /*
-  K&R C chapter 1 exercise 11, pg 21
+  K&R C chapter 1 exercise 12, pg 21
 
   Write a program that prints its input one word per line.
 
@@ -42,5 +42,5 @@ int main(){
 	    
     }
 
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

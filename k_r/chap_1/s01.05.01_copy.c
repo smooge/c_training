@@ -12,5 +12,5 @@ int main(){
 	putchar(c);
 	c = getchar();
     }
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

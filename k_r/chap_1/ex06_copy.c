@@ -12,5 +12,5 @@ int main(){
     }
     printf("%d - at EOF\n", c);
     printf("%d is EOF\n", EOF);
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

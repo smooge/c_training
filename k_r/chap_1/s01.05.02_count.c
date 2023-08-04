@@ -20,5 +20,5 @@ int main() {
 	++nc;
     }
     printf("\n%lu\n", nc); // Unsigned long use lu for printing.
-    exit(0);
+    exit(EXIT_SUCCESS);
 }

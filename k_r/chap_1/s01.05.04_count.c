@@ -34,5 +34,5 @@ int main(){
     }
 
     printf("%d %d %d\n", nl, nw, nc);
-    exit(0);
+    exit(EXIT_SUCCESS);
 }
