@@ -9,7 +9,7 @@ int main(){
     int c; // character to be manipulated
     c = getchar();
     while (c != EOF) {
-	putchar(c);
+	(void) putchar(c);
 	c = getchar();
     }
     exit(EXIT_SUCCESS);
