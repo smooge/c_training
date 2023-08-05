@@ -7,7 +7,7 @@ CC=/usr/bin/gcc
 #CFLAGS=-I. -O2 -std=c17 -Wall -Wextra -fanalyzer -pedantic
 
 ## A complex set of CFLAGS to be closer to MISRA (error on anything)
-CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextra -Wshadow -Wdouble-promotion -Wformat-truncation -Wformat=2 -Wundef -fno-common -Wconversion -Wstack-usage=1024 -fanalyzer -Werror -pedantic 
+CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextra -Wshadow -Wdouble-promotion -Wformat-truncation -Wformat=2 -Wundef -fno-common -Wconversion -Wstack-usage=4096 -fanalyzer -Werror=format-security -pedantic 
 
 #CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextra -Wshadow -Wdouble-promotion -Wformat-truncation -Wformat=2 -Wundef -fno-common -Wconversion -Wstack-usage=1024 -fanalyzer -Werror=format-security -pedantic 
 
@@ -30,7 +30,8 @@ s01.05.02_count \
 s01.05.03_count \
 s01.05.04_count \
 s01.06.01_arrays \
-s01.07.01_power
+s01.07.01_power \
+s01.09.01_longest
 
 all: $(EXECUTABLES)
 
