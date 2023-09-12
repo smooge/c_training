@@ -27,6 +27,7 @@ ex15_f2c \
 ex16_longest \
 ex17_print80 \
 ex18_cleanblanks \
+ex19_reverse \
 s01.02_f2c \
 s01.05.01_copy \
 s01.05.02_count \
