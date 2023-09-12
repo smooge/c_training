@@ -1,5 +1,5 @@
 /* 
- * K&R C Exercise 1-17
+ * K&R C Exercise 1-18
  * 
  * Write a program to remove trailing blanks and tabs from each line
  * of input and to remove entirely blank lines.
