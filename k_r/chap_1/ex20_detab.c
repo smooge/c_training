@@ -4,6 +4,10 @@
   Write a program `detab` which replaces tabs in the input with the
   proper number of blanks to space to the next tab stop. 
 
+  Note: This code is pretty much cribbed from Tondo and Gimpel's C
+  Answer Book book. The changes to that are minor so all credit goes
+  to them. 
+
  */
 
 #include <stdio.h>  // needed for printf
@@ -18,7 +22,9 @@ int main(){
     
     while((c=getchar()) != EOF){
 	if ((char) c == '\t') {
-	    //
+	    // col % tabsize will give you how much of a tab you have
+	    // eaten up with a mod of the current column space with
+	    // the TABSIZE. 
 	    blanks = TABSIZE - (col % TABSIZE);
 	    while (blanks > 0){
 		pc=putchar('-');
