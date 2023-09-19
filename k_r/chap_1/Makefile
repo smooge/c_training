@@ -35,7 +35,8 @@ s01.05.03_count \
 s01.05.04_count \
 s01.06.01_arrays \
 s01.07.01_power \
-s01.09.01_longest
+s01.09.01_longest \
+s01.10.01_longest
 
 all: $(EXECUTABLES)
 
