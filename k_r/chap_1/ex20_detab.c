@@ -18,7 +18,8 @@ int main(){
     
     while((c=getchar()) != EOF){
 	if ((char) c == '\t') {
-	    blanks = TABSIZE - col % TABSIZE;
+	    //
+	    blanks = TABSIZE - (col % TABSIZE);
 	    while (blanks > 0){
 		pc=putchar('-');
 		if (pc == EOF)
@@ -29,7 +30,8 @@ int main(){
 	} else {
 	    pc=putchar(c);
 	    if (pc == EOF)
-		exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE); // putchar returns an int and
+				    // could be broken.
 	    if ((char) c == '\n'){
 		col = 0;
 	    } else {
