@@ -24,3 +24,6 @@
 
 # Backups #
 *~
+
+## MacOS extras
+*.dSYM/

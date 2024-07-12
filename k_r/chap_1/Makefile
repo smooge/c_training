@@ -1,7 +1,7 @@
 # Makefile for Chapter 1 items in K&R C
 
-#CC=/opt/homebrew/bin/gcc
-CC=/usr/bin/gcc
+CC=/opt/homebrew/bin/gcc-14
+#CC=/usr/bin/gcc
 
 ## A simple set of CFLAGS to get basic issues
 #CFLAGS=-I. -O2 -std=c17 -Wall -Wextra -fanalyzer -pedantic
@@ -52,6 +52,7 @@ all: $(EXECUTABLES)
 
 clean:
 	rm -f *.o *~ core *.su *.dump
+	rm -rf *.dSYM/
 
 .PHONY: clean_exec
 

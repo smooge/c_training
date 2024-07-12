@@ -14,22 +14,22 @@
 
 #define MAXLINE 1024 /* longest line we will care about. */
 
-static int getline(char line[], int maxlen);
+static int get_line(char line[], int maxlen);
 static void reverse(char s[]);
 
 int main(){
     char line[MAXLINE];
 
-    /* here we do our standard getlines until we have 0 */
-    while (getline(line,MAXLINE) >0){
+    /* here we do our standard get_lines until we have 0 */
+    while (get_line(line,MAXLINE) >0){
 	reverse(line);  /* string arrays are special so no need for ptr */
 	printf("%s",line);
     }
     return 0;
 }
 
-/* getline: read a line into string array, return length */
-int getline(char line[],int maxlen){
+/* get_line: read a line into string array, return length */
+int get_line(char line[],int maxlen){
     int c = 0;
     int i = 0;
 
@@ -55,7 +55,7 @@ void reverse(char s[]){
     char t; /* t is for temp */
 
     /* find the end of the line using a variable */
-    while (s[i] != '\0' && (a < MAXLINE)){
+    while (s[i] != '\0' && (i < MAXLINE)){
 	i++;
     }
     /* back off the end of the line */

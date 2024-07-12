@@ -8,7 +8,7 @@
 
 #define MAXLINE 1000 /* maximum input line size */
 
-static int getline(char line[], int len);
+static int get_line(char line[], int len);
 static void copy(char to[], char from[]);
 
 /* print the longest line */
@@ -25,7 +25,7 @@ int main(){
     }
     
     do {
-	len = getline(line, MAXLINE);
+	len = get_line(line, MAXLINE);
 	if (len > max) {
 	    max = len;
 	    copy(longest, line);
@@ -38,8 +38,8 @@ int main(){
     exit(EXIT_SUCCESS);
 }
 
-/* getline: read a line into string array, return length */
-int getline(char line[],int len){
+/* get_line: read a line into string array, return length */
+int get_line(char line[],int len){
     int c = 0;
     int i = 0;
 

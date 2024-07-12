@@ -31,7 +31,8 @@ int main(){
 	    // needed.
 	    blanks=0;
 	    tabs++;
-	    col = col + (TABSIZE - (col % TABSIZE));
+	    // work out how much of a col needs to be replaced by tabs
+	    col = col + (TABSIZE - ((col) % TABSIZE));
 	} else if ((char) c == ' ') {
 	    col++;
 	    // start eating the blanks until we reach a tab stop
@@ -50,7 +51,7 @@ int main(){
 	    }
 	    // walk down the number of blanks left.
 	    for (; blanks > 0; blanks--){
-		my_putc('-');
+		my_putc('_');
 	    }
 	    my_putc((char) c);
 	    if ((char) c == '\n'){

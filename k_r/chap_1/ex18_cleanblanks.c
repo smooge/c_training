@@ -13,7 +13,7 @@
 
 #define MAXLINE 1024 /* longest line we will care about */
 
-static int getline(char line[], int len);
+static int get_line(char line[], int len);
 static int clean_blanks(char line[], int maxlen);
 
 /* print all lines longer than MINLINE but only up to MAXLINE */
@@ -29,7 +29,7 @@ int main(){
     }
     
     do {
-	len = getline(line, MAXLINE);
+	len = get_line(line, MAXLINE);
 	if (clean_blanks(line,len) > 0){
 	    printf("%s",line);
 	}
@@ -37,8 +37,8 @@ int main(){
     exit(EXIT_SUCCESS);
 }
 
-/* getline: read a line into string array, return length */
-int getline(char line[],int maxlen){
+/* get_line: read a line into string array, return length */
+int get_line(char line[],int maxlen){
     int c = 0;
     int i = 0;
 
@@ -60,7 +60,7 @@ int getline(char line[],int maxlen){
 }
 
 /* clean_blanks: remove any trailing blank characters at the end of a
-string. Since we know the length of line from getline use that to cut
+string. Since we know the length of line from get_line use that to cut
 down the math. */
 
 int clean_blanks(char line[], int len) {

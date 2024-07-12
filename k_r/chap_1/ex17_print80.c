@@ -14,7 +14,7 @@
 #define MAXLINE 1024 /* longest line we will care about */
 #define MINLINE 20 /* minimum line length to print */
 
-static int getline(char line[], int len);
+static int get_line(char line[], int len);
 
 /* print all lines longer than MINLINE but only up to MAXLINE */
 int main(){
@@ -29,7 +29,7 @@ int main(){
     }
     
     do {
-	len = getline(line, MAXLINE);
+	len = get_line(line, MAXLINE);
 	if (len >= MINLINE) {
 	    printf("%4d %s",len, line);
 	}
@@ -37,8 +37,8 @@ int main(){
     exit(EXIT_SUCCESS);
 }
 
-/* getline: read a line into string array, return length */
-int getline(char line[],int len){
+/* get_line: read a line into string array, return length */
+int get_line(char line[],int len){
     int c = 0;
     int i = 0;
 
