@@ -1,11 +1,11 @@
 /*
  * K&R C chapter 1 exercise 23, pg 34
  *
- * Wrie a program to remove all comments from a C program. Don't
+ * Write a program to remove all comments from a C program. Don't
  * forget to handle quoted strings and character constants properly. C
  * comments do not nest. 
- * Inspiration is taken from the C Answer Book pg 35-37.
- * Comments are classic C comments and not C++ ones
+ * Inspiration is taken from the C Answer Book pg 38-39.
+ * Comments are classic C comments and C++
  */
 
 #include <stdio.h>
