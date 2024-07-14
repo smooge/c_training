@@ -31,6 +31,8 @@ ex19_reverse \
 ex20_detab \
 ex21_entab \
 ex22_fold \
+ex23_decomment \
+ex24_syntaxcheck \
 s01.02_f2c \
 s01.05.01_copy \
 s01.05.02_count \
