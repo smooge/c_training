@@ -13,7 +13,9 @@ CFLAGS=-I. -O2 -std=c17 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Wextr
 
 EXECUTABLES = \
 ex01_determine_range \
-ex02_loop
+ex02_loop \
+ex03_htoi \
+ex04_squeeze
 
 all: $(EXECUTABLES)
 
