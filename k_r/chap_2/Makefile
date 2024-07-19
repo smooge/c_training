@@ -15,7 +15,9 @@ EXECUTABLES = \
 ex01_determine_range \
 ex02_loop \
 ex03_htoi \
-ex04_squeeze
+ex04_squeeze \
+ex05_any \
+ex06_setbits
 
 all: $(EXECUTABLES)
 
