@@ -17,7 +17,10 @@ ex02_loop \
 ex03_htoi \
 ex04_squeeze \
 ex05_any \
-ex06_setbits
+ex06_setbits \
+ex07_invert \
+ex08_rightrotate \
+ex09_bitcount
 
 all: $(EXECUTABLES)
 
