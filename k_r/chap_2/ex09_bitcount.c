@@ -1,8 +1,31 @@
 /*
  * K&R Second Edition, Chapter 2, pg 51 exercise 2-9
  *
- * 
- * 
+ * In a two's complement number system, x &= (x-1) deletes the
+ * rightmost 1 bit in x. Explain why. Use this observation to write a
+ * faster version of bit-count.
+ *
+ * The reason requires understanding what a 'two-s complement' number
+ * system means.  A one's complement system seems to be that the
+ * negative numbers are the bit reverse of the positive so you have in
+ * a 4 bit system.
+ * 0000 = +0 / 1111 = -0
+ * 0001 = +1 / 1110 = -1
+ * 0010 = +2 / 1101 = -2
+ * 0011 = +3 / 1100 = -3
+ * 0100 = +4 / 1011 = -4
+ *
+ * A two's complement system instead uses just the left most bit to
+ * indicate the sign of a number:
+ * 0000 = 0 /
+ * 0001 = 1 / 1111 = -1
+ * 0010 = 2 / 1110 = -2
+ * 0011 = 3 / 1101 = -3
+ * 0100 = 4 / 1100 = -4
+ * 0101 = 5 / 1011 = -5
+ * 0110 = 6 / 1010 = -6
+ * 0111 = 7 / 1001 = -7
+ *          / 1000 = -8
  *
  */
 

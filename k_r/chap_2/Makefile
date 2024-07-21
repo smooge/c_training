@@ -20,7 +20,8 @@ ex05_any \
 ex06_setbits \
 ex07_invert \
 ex08_rightrotate \
-ex09_bitcount
+ex09_bitcount \
+ex10_lower
 
 all: $(EXECUTABLES)
 
